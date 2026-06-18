@@ -152,10 +152,10 @@ margin-bottom:15px;
 }
 
 .grid{
-display:grid;
-grid-template-columns:55% 45%;
-gap:70px;
-align-items:center;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
 }
 .grid p{
 font-size:1.25rem;
@@ -383,7 +383,7 @@ box-shadow:0 10px 25px rgba(181,139,87,.3);
     font-size:1rem;
     color:#777;
 }
-
+}
 @keyframes fadeCard{
 
 from{
@@ -522,6 +522,44 @@ body{
 
 .loader-names{
     font-size:2.5rem;
+}
+
+}
+@media (max-width:768px){
+
+.grid{
+    grid-template-columns:1fr !important;
+    gap:25px !important;
+}
+
+.grid p{
+    width:100% !important;
+    max-width:none !important;
+    text-align:left !important;
+    font-size:1.1rem !important;
+    line-height:1.8 !important;
+}
+
+.photo{
+    width:100% !important;
+    max-width:380px !important;
+    margin:0 auto !important;
+    display:block;
+}
+
+.wish-card{
+    width:100% !important;
+    padding:40px 25px !important;
+}
+
+.wish-card p{
+    max-width:none !important;
+    width:100% !important;
+    line-height:1.8 !important;
+}
+
+.title{
+    font-size:2.5rem !important;
 }
 
 }
@@ -888,4 +926,3 @@ document.getElementById('loader').remove();
 </script>
 </body>
 </html>
-
