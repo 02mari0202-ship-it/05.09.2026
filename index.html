@@ -400,6 +400,114 @@ transform:translateY(0);
 .wishes-intro{
 padding-bottom:40px;
 }
+@media (max-width:768px){
+
+nav{
+    padding:12px 8px;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    font-size:13px;
+}
+
+.hero h1{
+    font-size:4rem !important;
+    line-height:1;
+}
+
+.hero .date{
+    font-size:1.7rem;
+}
+
+.title{
+    font-size:2.8rem !important;
+    line-height:1.15;
+}
+
+.glass{
+    padding:30px 20px !important;
+    width:100%;
+}
+
+section{
+    padding:70px 15px !important;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+.timeline-item{
+    flex-direction:column;
+    text-align:center;
+    gap:10px;
+}
+
+.quote{
+    font-size:1.4rem !important;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+}
+#loader{
+    position:fixed;
+    inset:0;
+    background:#faf7f2;
+    z-index:99999;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    transition:opacity 1.5s;
+}
+
+.loader-content{
+    animation:fadeIn 1.5s;
+}
+
+.loader-names{
+    font-family:'Cormorant Garamond',serif;
+    font-size:4rem;
+    margin-bottom:20px;
+    color:#222;
+}
+
+.loader-date{
+    color:#d7b98a;
+    letter-spacing:4px;
+    margin-bottom:20px;
+}
+
+.loader-text{
+    color:#666;
+    line-height:1.6;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media (max-width:768px){
+
+.loader-names{
+    font-size:2.5rem;
+}
+
+}
 </style>
 </head>
 <body>
@@ -728,6 +836,38 @@ document.getElementById("guestForm")
 });
 showCard(0);
 
+</script>
+<div id="loader">
+    <div class="loader-content">
+        <div class="loader-names">
+            Марина & Кирилл
+        </div>
+
+        <div class="loader-date">
+            05 сентября 2026
+        </div>
+
+        <div class="loader-text">
+            С любовью приглашаем вас
+            разделить этот день с нами
+        </div>
+    </div>
+</div>
+
+<script>
+window.addEventListener('load',()=>{
+
+setTimeout(()=>{
+
+document.getElementById('loader').style.opacity='0';
+
+setTimeout(()=>{
+document.getElementById('loader').remove();
+},1500);
+
+},2500);
+
+});
 </script>
 </body>
 </html>
