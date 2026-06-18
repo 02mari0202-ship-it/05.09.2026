@@ -584,11 +584,16 @@ body{
 }
 .music-btn{
 position:fixed;
-right:25px;
-bottom:25px;
 
-width:60px;
-height:60px;
+top:80px;
+right:25px;
+
+width:58px;
+height:58px;
+
+display:flex;
+align-items:center;
+justify-content:center;
 
 border:none;
 border-radius:50%;
@@ -600,7 +605,9 @@ background:linear-gradient(
 );
 
 color:white;
-font-size:28px;
+font-size:24px;
+line-height:1;
+
 cursor:pointer;
 
 box-shadow:
@@ -609,6 +616,7 @@ box-shadow:
 z-index:9999;
 
 transition:.3s;
+padding:0;
 }
 
 .music-btn:hover{
@@ -656,7 +664,7 @@ box-shadow:0 0 0 0 rgba(181,139,87,0);
 
 <section id="invite" class="fade">
 <div class="glass">
-    <div class="eyebrow">MARINA & KIRILL</div>
+    <div class="eyebrow">Марина & Кирилл</div>
 <h2 class="title">Мы женимся</h2>
 <div class="divider">✦</div>
 <div class="grid">
@@ -901,7 +909,7 @@ text-transform:uppercase;
 </section>
 <footer>
 <h2>Марина & Кирилл</h2>
-<p>• 05.09.2026 • \</p>
+<p>• 05.09.2026 • </p>
 </footer>
 
 <div class="lightbox" id="lightbox" onclick="this.style.display='none'">
@@ -1086,7 +1094,7 @@ isPlaying=true;
 music.pause();
 
 musicBtn.classList.remove('playing');
-musicBtn.innerHTML='♫';
+musicBtn.innerHTML='♪';
 
 isPlaying=false;
 
